@@ -12,9 +12,12 @@
 </div>
 <hr/>
 <div class="angularInput" ng-app="app" ng-controller="one">
-    <label for="">Enter:</label>
+    <label>Enter:</label>
     <input type="text" id="angularName" ng-model="angularName"/>
-    <label for="" id="angularNameValue">{{angularName}}</label>
+    <label id="angularNameValue">{{angularName}}</label>
+    <ul>
+        <li ng-repeat="pet in pets">{{pet.name}}</li>
+    </ul>
 </div>
 <script src="./scripts/libs/jquery-2.1.4.js"></script>
 <script src="./scripts/libs/angular.js"></script>

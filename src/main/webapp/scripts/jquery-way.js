@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     var nameEle = $("#name");
     var nameVal = $("#nameValue");
 
@@ -7,4 +7,14 @@ $(document).ready(function(){
     function nameChange() {
         nameVal.html(this.value)
     }
+
+    function init() {
+        $.ajax({
+            url: "/api/pets", method: "get", success: function (data) {
+                pets = data;
+            }
+        })
+    }
+
+    init();
 });
