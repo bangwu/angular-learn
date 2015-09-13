@@ -1,31 +1,36 @@
 <html>
 <head>
     <title>angular-learn</title>
+    <link href="./css/bootstrap.css" rel="stylesheet"/>
+    <link href="./css/bootstrap-theme.css" rel="stylesheet"/>
+    <script src="./scripts/libs/jquery-2.1.4.js"></script>
+    <script src="./scripts/libs/bootstrap.js"></script>
+    <script src="./scripts/libs/angular.js"></script>
+    <script src="./scripts/libs/angular-route.js"></script>
+    <script src="./scripts/jquery-way.js"></script>
+    <script src="./scripts/angular-way.js"></script>
 </head>
-<body>
+<body ng-app="app">
 <h2>Hello Angular!</h2>
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section>
+    <div ng-view></div>
+</section>
+<footer>
+    <div class="text-center">此网站由ThoughtWorks郑大夜校@版权所有</div>
+</footer>
 
-<div class="main">
-    <label for="name">Enter:</label>
-    <input name="name" id="name"><br>
-    <label id="nameValue"></label>
-    <ul id="pets">
-
-    </ul>
-</div>
-<hr/>
-<div class="angularInput" ng-app="app" ng-controller="one">
-    <label>Enter:</label>
-    <input type="text" id="angularName" ng-model="angularName"/>
-    <label id="angularNameValue">{{angularName}}</label>
-    <ul>
-        <li ng-repeat="pet in pets">{{pet.name}}</li>
-    </ul>
-</div>
-<script src="./scripts/libs/jquery-2.1.4.js"></script>
-<script src="./scripts/libs/angular.js"></script>
-<script src="scripts/libs/angular-route.js"></script>
-<script src="./scripts/jquery-way.js"></script>
-<script src="./scripts/angular-way.js"></script>
 </body>
 </html>
