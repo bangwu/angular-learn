@@ -1,7 +1,7 @@
 <div ng-controller="petsCtrl">
     <div class="pets">
         <ul>
-            <li class="pet" ng-repeat="pet in pets">{{pet.name}}</li>
+            <li class="pet" ng-repeat="pet in pets"><a href='#/pets/{{pet.id}}'>{{pet.name}}</a></li>
         </ul>
     </div>
 </div>
