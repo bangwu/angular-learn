@@ -1,7 +1,13 @@
 <div ng-controller="petsCtrl">
+    <section>
+        <label for="">
+            Search:
+        </label>
+        <input type="text" ng-model="myFilter"/>
+    </section>
     <div class="pets">
         <ul>
-            <li class="pet" ng-repeat="pet in pets"><a href='#/pets/{{pet.id}}'>{{pet.name}}</a></li>
+            <li class="pet" ng-repeat="pet in pets | filter: myFilter"><a href='#/pets/{{pet.id}}'>{{pet.name}}</a></li>
         </ul>
     </div>
 </div>
